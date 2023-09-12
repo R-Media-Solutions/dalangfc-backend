@@ -2467,6 +2467,17 @@ class Member extends AN_Controller
         // personal info
         $name                   = $this->input->post('reg_member_name');
         $name                   = trim(an_isset($name, '', '', true));
+        $jersey_name            = $this->input->post('reg_jersey_name');
+        $jersey_name            = trim(an_isset($jersey_name, '', '', true));
+        $jersey_number          = $this->input->post('reg_jersey_number');
+        $jersey_number          = trim(an_isset($jersey_number, '', '', true));
+        $jersey_size            = $this->input->post('reg_jersey_size');
+        $jersey_size            = trim(an_isset($jersey_size, '', '', true));
+        $type_player            = $this->input->post('reg_type_player');
+        $type_player            = trim(an_isset($type_player, '', '', true));
+        $type_position          = $this->input->post('reg_type_position');
+        $type_position          = trim(an_isset($type_position, '', '', true));
+
         $pob                    = $this->input->post('reg_member_pob');
         $pob                    = trim(an_isset($pob, '', '', true));
         $dob_date               = $this->input->post('reg_member_dob_date');
@@ -2545,6 +2556,7 @@ class Member extends AN_Controller
         $this->form_validation->set_rules('reg_member_username','Username','required');
         $this->form_validation->set_rules('reg_member_password', 'Password', 'required');
         $this->form_validation->set_rules('reg_member_name', 'Nama Anggota', 'required');
+        $this->form_validation->set_rules('reg_type_player', 'Tipe Pemain', 'required');
         // $this->form_validation->set_rules('reg_member_pob', 'Tempat Lahir', 'required');
         // $this->form_validation->set_rules('reg_member_dob_date', 'Tangal Lahir', 'required');
         // $this->form_validation->set_rules('reg_member_dob_month', 'Bulan Lahir', 'required');
@@ -2847,6 +2859,11 @@ class Member extends AN_Controller
             'parent'                => $upline_id,
             'position'              => $position,
             'name'                  => $name,
+            'jersey_name'           => $jersey_name,
+            'jersey_number'         => $jersey_number,
+            'jersey_size'           => $jersey_size,
+            'type_player'           => $type_player,
+            'type_position'         => $type_position,
             // 'pob'                   => $pob,
             // 'dob'                   => $dateofbirth,
             // 'gender'                => $gender,

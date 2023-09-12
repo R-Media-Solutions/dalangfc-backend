@@ -105,25 +105,25 @@ $route['board/tree3/(:any)/(:any)'] 				        = "backend/boardtree/3/$1/$2";
 
 // PIN Page Routes
 // ---------------------------------------------------------
-$route['pin/generate'] 								= "backend/pingenerate";
-$route['pin/order'] 								= "backend/pinorder";
-$route['pin/transfer'] 								= "backend/pintransfer";
-$route['pin/datalists'] 							= "backend/pinlist";
-$route['pin/datalists/(:any)']						= "backend/pinlist/$1";
-$route['productdatalists'] 							= "backend/pinlist";
-$route['productdatalists/(:any)']					= "backend/pinlist/$1";
-$route['pin/orderlist'] 							= "backend/pinorderlist";
-$route['pin/historylist'] 							= "backend/pinhistorylist";
+$route['pin/generate'] 								              = "backend/pingenerate";
+$route['pin/order'] 								                = "backend/pinorder";
+$route['pin/transfer'] 								              = "backend/pintransfer";
+$route['pin/datalists'] 							              = "backend/pinlist";
+$route['pin/datalists/(:any)']						          = "backend/pinlist/$1";
+$route['productdatalists'] 							            = "backend/pinlist";
+$route['productdatalists/(:any)']					          = "backend/pinlist/$1";
+$route['pin/orderlist'] 							              = "backend/pinorderlist";
+$route['pin/historylist'] 							            = "backend/pinhistorylist";
 
 // Shopping Page Routes
 // ---------------------------------------------------------
-$route['shoppingcart']								= "backend/registration";
-$route['shopping/shoplist']							= "backend/shoppingshop";
-$route['shopping/shophistorylist'] 					= "backend/shoppingshophistory";
-$route['shopping/cart'] 							= "backend/shoppingcart";
-$route['cart'] 										= "backend/shoppingcart";
-$route['checkout'] 									= "backend/shoppingcheckout";
-$route['find-agency'] 								= "backend/shoppingfindagent";
+$route['shoppingcart']								              = "backend/registration";
+$route['shopping/shoplist']							            = "backend/shoppingshop";
+$route['shopping/shophistorylist'] 					        = "backend/shoppingshophistory";
+$route['shopping/cart'] 							              = "backend/shoppingcart";
+$route['cart'] 										                  = "backend/shoppingcart";
+$route['checkout'] 									                = "backend/shoppingcheckout";
+$route['find-agency'] 								              = "backend/shoppingfindagent";
 
 // Promo Code Page Routes
 // ---------------------------------------------------------

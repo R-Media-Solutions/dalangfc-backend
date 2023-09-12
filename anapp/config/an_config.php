@@ -167,6 +167,42 @@ $config['gender']               = array(
 );
 
 /**
+ * Jersey Size
+ */
+$config['jersey_size']               = array(
+    'XS'    => 'XS',
+    'S'     => 'S',
+    'M'     => 'M',
+    'L'     => 'L',
+    'XL'    => 'XL',
+    '2XL'   => '2XL',
+    '3XL'   => '3XL',
+);
+
+/**
+ * Type Player Type
+ */
+$config['player_type']    = array(
+    ''      => '',
+    '1'     => 'Pemain',
+    '2'     => 'Kiper',
+    '3'     => 'Staf',
+    '4'     => 'Pelatih',
+    '5'     => 'Manager',
+);
+
+/**
+ * Type Player Position
+ */
+$config['player_position']    = array(
+    ''      => '',
+    'GOALKEEPER'    => 'GOALKEEPER',
+    'DEFENDER'      => 'DEFENDER',
+    'MIDFIELDER'    => 'MIDFIELDER',
+    'FORWARD'       => 'FORWARD',
+);
+
+/**
  * Marital Status
  */
 $config['marital']              = array(

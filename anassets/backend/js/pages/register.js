@@ -285,6 +285,9 @@ var RegisterMember = function() {
                     // required: true
                 },
                 */
+                reg_type_player: {
+                    required: true,
+                },
                 reg_member_term: {
                     required: true,
                 },
@@ -301,6 +304,9 @@ var RegisterMember = function() {
                 },
                 reg_member_phone: {
                     remote: "No. Telp/HP sudah digunakan. Silahkan gunakan No. Telp/HP lain",
+                },
+                reg_member_player: {
+                    remote: "Tipe Pemain anda sudah digunakan/ Silahkan gunakan tipe pemain lain",
                 },
                 /*
                 reg_member_idcard: {

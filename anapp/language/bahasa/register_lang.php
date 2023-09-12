@@ -70,6 +70,11 @@ $lang['reg_pemilik_npwp']   			= 'Nama Pemilik NPWP';
 $lang['reg_alamat_npwp']   				= 'Alamat NPWP';
 $lang['reg_ahli_waris']   				= 'Ahli Waris - Hubungan';
 $lang['reg_ahli_waris_ex']   			= 'Contoh : Andika - Anak kandung';
+$lang['reg_jersey_name']   			  = 'Nama Jersey';
+$lang['reg_jersey_number']   			= 'Nomor Jersey';
+$lang['reg_jersey_size']   			  = 'Ukuran Jersey';
+$lang['reg_type_player']   			  = 'Tipe Pemain';
+$lang['reg_type_position']   			= 'Tipe Posisi';
 
 $lang['reg_emergency_contact'] 			= 'Emergency Contact';
 $lang['reg_relationship'] 				= 'Relationship';

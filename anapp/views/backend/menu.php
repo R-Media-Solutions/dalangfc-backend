@@ -13,6 +13,49 @@ if (as_administrator($member))
             'sub'   => false,
         ),
         array(
+            'title' => lang('menu_member'),
+            'nav'   => 'member',
+            'link'  => 'javascript:;',
+            'icon'  => 'ni ni-single-02',
+            'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+            'sub'   => array(
+                array(
+                    'title' => lang('menu_member_new'),
+                    'nav'   => 'new',
+                    'link'  => base_url('member/new'),
+                    'icon'  => 'fa-user-plus',
+                    'roles' => array(STAFF_ACCESS2),
+                    'sub'   => false,
+                ),
+                array(
+                    'title' => lang('menu_member_list'),
+                    'nav'   => 'lists',
+                    'link'  => base_url('member/lists'),
+                    'icon'  => '',
+                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+                    'sub'   => false,
+                ),
+                /*
+                array(
+                    'title' => 'List Sponsor',
+                    'nav'   => 'sponsorlists',
+                    'link'  => base_url('member/sponsorlists'),
+                    'icon'  => '',
+                    'roles' => array(STAFF_ACCESS1),
+                    'sub'   => false,
+                ),
+                array(
+                    'title' => lang('menu_member_generation'),
+                    'nav'   => 'generation',
+                    'link'  => base_url('member/generation'),
+                    'icon'  => '',
+                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+                    'sub'   => false,
+                ),
+                */
+            ),
+        ),
+        array(
             'title' => lang('menu_home'),
             'nav'   => 'home',
             'link'  => 'javascript:;',
@@ -66,47 +109,6 @@ if (as_administrator($member))
                     'title' => lang('menu_about_detail_list'),
                     'nav'   => 'lists',
                     'link'  => base_url('about/historylists'),
-                    'icon'  => '',
-                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
-                    'sub'   => false,
-                ),
-            ),
-        ),
-        array(
-            'title' => lang('menu_member'),
-            'nav'   => 'member',
-            'link'  => 'javascript:;',
-            'icon'  => 'ni ni-single-02',
-            'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
-            'sub'   => array(
-                array(
-                    'title' => lang('menu_member_new'),
-                    'nav'   => 'new',
-                    'link'  => base_url('member/new'),
-                    'icon'  => 'fa-user-plus',
-                    'roles' => array(STAFF_ACCESS2),
-                    'sub'   => false,
-                ),
-                array(
-                    'title' => lang('menu_member_list'),
-                    'nav'   => 'lists',
-                    'link'  => base_url('member/lists'),
-                    'icon'  => '',
-                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
-                    'sub'   => false,
-                ),
-                array(
-                    'title' => 'List Sponsor',
-                    'nav'   => 'sponsorlists',
-                    'link'  => base_url('member/sponsorlists'),
-                    'icon'  => '',
-                    'roles' => array(STAFF_ACCESS1),
-                    'sub'   => false,
-                ),
-                array(
-                    'title' => lang('menu_member_generation'),
-                    'nav'   => 'generation',
-                    'link'  => base_url('member/generation'),
                     'icon'  => '',
                     'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
                     'sub'   => false,
@@ -376,6 +378,7 @@ if (as_administrator($member))
                     'roles' => array(STAFF_ACCESS15),
                     'sub'   => false,
                 ),
+                /*
                 array(
                     'title' => lang('menu_member_new'),
                     'nav'   => 'new',
@@ -392,6 +395,7 @@ if (as_administrator($member))
                     'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
                     'sub'   => false,
                 ),
+                */
             ),
         ),
     );
@@ -399,9 +403,9 @@ if (as_administrator($member))
 else 
 {
     $reseller       = ( $member->type_status == TYPE_STATUS_RESELLER ? true : false );
-    $dropshipper    = ( $member->type_status == TYPE_STATUS_RESELLER ? true : false );
+    $dropshipper    = ( $member->type_status == TYPE_STATUS_DROPSHIPPER ? true : false );
     $membertype     = ( $member->type_status == TYPE_STATUS_MEMBER ? true : false );
-    
+
     if($reseller)
     {
         $sidebar    = array(
@@ -775,7 +779,7 @@ if($typePackage == ELPRO_PACKAGE_BRONZE)
 {
     $arrSidebar = array();
     foreach($sidebar as $idx => $nav):
-        if($nav['nav'] == 'member' || $nav['nav'] == 'commission' || $nav['nav'] == 'faspay' 
+        if($nav['nav'] == 'commission' || $nav['nav'] == 'faspay' 
            || $nav['nav'] == 'report' || $nav['nav'] == 'productdatalists' || $nav['nav'] == 'staff' 
            || $nav['nav'] == 'faq' || $nav['nav'] == 'contact'
         ){

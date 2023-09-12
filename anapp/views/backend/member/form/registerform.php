@@ -184,6 +184,91 @@
     </div>
 </div> 
 
+<!-- Jersey Name -->
+<div class="form-group row">
+    <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_jersey_name'); ?></label>
+    <div class="col-md-9">
+        <div class="input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text"></span>
+            </div>
+            <input type="text" class="form-control text-uppercase" name="reg_jersey_name" id="reg_jersey_name" placeholder="<?php echo lang('reg_jersey_name'); ?>">
+        </div>
+    </div>
+</div>
+
+<!-- Jersey Size -->
+<?php $jerseySize = true; ?>
+<?php if ( $jerseySize ) { ?>
+<div class="form-group row mb-2">
+    <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_jersey_size'); ?></label>
+    <div class="col-md-9">
+        <div class="row pt-2 custom-radio-inline">
+            <?php
+                $cfg_jersey_size = config_item('jersey_size');
+                if( !empty($cfg_jersey_size) ){
+                    foreach($cfg_jersey_size as $k => $v){
+                        echo '
+                            <div class="col-md-3 col-5">
+                                <div class="custom-control custom-radio">
+                                    <input name="reg_jersey_size" class="custom-control-input" id="reg_jersey_size_'.$k.'" type="radio" value="'.$k.'">
+                                    <label class="custom-control-label" for="reg_jersey_size_'.$k.'">'. $v .'</label>
+                                </div>
+                            </div>
+                        ';
+                    }
+                }
+            ?> 
+        </div>
+    </div>
+</div>  
+<?php } ?>
+
+<!-- Jersey Number -->
+<div class="form-group row">
+    <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_jersey_number'); ?></label>
+    <div class="col-md-9">
+        <div class="input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text"></span>
+            </div>
+            <input type="text" class="form-control text-uppercase" name="reg_jersey_number" id="reg_jersey_number" placeholder="<?php echo lang('reg_jersey_number'); ?>">
+        </div>
+    </div>
+</div>
+
+<div class="form-group row mb-2">
+    <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_type_player'); ?> <span class="required">*</span></label>
+    <div class="col-md-9">
+        <select class="form-control" name="reg_type_player" id="reg_type_player">
+            <?php
+                $player_type = config_item('player_type');
+                if( !empty($player_type) ){
+                    foreach($player_type as $k => $v){
+                        echo '<option value="'.$k.'">'.$v.'</option>';
+                    }
+                }
+            ?>
+        </select>
+    </div>
+</div> 
+
+<div class="form-group row mb-2">
+    <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_type_position'); ?></label>
+    <div class="col-md-9">
+        <select class="form-control" name="reg_type_position" id="reg_type_position">
+            <?php
+                $player_position = config_item('player_position');
+                if( !empty($player_position) ){
+                    foreach($player_position as $k => $v){
+                        echo '<option value="'.$k.'">'.$v.'</option>';
+                    }
+                }
+            ?>
+        </select>
+    </div>
+</div> 
+
 <!--
 <div class="form-group row mb-2">
     <label class="col-md-3 col-form-label form-control-label"><?php echo lang('reg_no_telp'); ?> (Home) </label>
@@ -209,6 +294,7 @@
     </div>
 </div>  
 -->
+
 <?php $pob = false; ?>
 <?php if ( $pob ) { ?>
 <div class="form-group row mb-2">

@@ -48,7 +48,7 @@
                 <a href="<?php echo base_url('forgetusername'); ?>" class="forgot-password-link">Lupa Username? Klik disni</a>
                 -->
                 <nav class="login-card-footer-nav mt-4">
-                <?php echo COMPANY_NAME; ?> Powered By <a href="https://rmediasolutionsid.com/" target="_blank">RMedia Solutions &copy; 2023. </a>All Right Reserved.
+                <?php echo COMPANY_NAME; ?><br />Powered By <a href="https://rmediasolutionsid.com/" target="_blank"><img src="<?php echo ASSET_PATH; ?>auth/images/rmedia.png" width="80">&copy; 2023. </a><br />All Right Reserved.
                 </nav>
             </div>
         </div>
