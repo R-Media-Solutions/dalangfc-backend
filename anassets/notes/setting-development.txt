@@ -1,0 +1,18 @@
+//Production Setting
+https://bitasdev.co.id/
+
+//Development Setting
+D:\Xampp\apache\conf\extra\httpd-vhosts.cong
+<VirtualHost *:80>
+	ServerName bitasdev.co.id
+	ServerAlias www.bitasdev.co.id
+	DocumentRoot "D:/XAMPP/htdocs/bitasdev"
+	
+	<Directory D:/XAMPP/htdocs/bitasdev>
+		Order allow,deny
+		Allow from all
+	</Directory>
+</VirtualHost>
+
+C:\\Windows\System32\drivers\etc\hosts
+127.0.0.1	bitasdev.co.id www.bitasdev.co.id http://bitasdev.co.id
