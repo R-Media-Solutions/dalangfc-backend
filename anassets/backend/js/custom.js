@@ -7546,27 +7546,6 @@ var HomeManage = function() {
     var total_qty       = 0;
     var total_price     = 0;
 
-    var _trEmpty        = `<tr class="data-empty"><td colspan="5" class="text-center">Pelanggan belum ada yang di pilih.</td></tr>`;
-
-    // ---------------------------------
-    // Quill Editor Load
-    // ---------------------------------
-    var text_editor         = $('#editor-client');
-    var placeholder_editor  = $('#editor-client').data("quill-placeholder");
-    if ( text_editor.length ) {
-        var quill_editor    = new Quill('#editor-client', {
-            modules: {
-                toolbar: [
-                    ["bold", "italic"],
-                    ["link", "blockquote", "code"],
-                    [{list: "ordered"}, {list: "bullet"}]
-                ]
-            },
-            placeholder: placeholder_editor,
-            theme: "snow"
-        });
-    }
-
     // ---------------------------------
     // Quill Editor Home Detail Load
     // ---------------------------------
@@ -8011,6 +7990,46 @@ var HomeManage = function() {
         });
     };
 
+    return {
+        init: function() {
+            handleSaveHome();
+            handleHomeSetting();
+            handleValidationHomeDetailManage();
+        },
+    };
+}();
+
+// ===========================================================
+// master data manage Function
+// ===========================================================
+var MasterDataManage = function() {
+    var client_img;
+    var homedetail_img;
+
+    var total_qty       = 0;
+    var total_price     = 0;
+
+    var _trEmpty        = `<tr class="data-empty"><td colspan="5" class="text-center">Pelanggan belum ada yang di pilih.</td></tr>`;
+
+    // ---------------------------------
+    // Quill Editor Load
+    // ---------------------------------
+    var text_editor         = $('#editor-client');
+    var placeholder_editor  = $('#editor-client').data("quill-placeholder");
+    if ( text_editor.length ) {
+        var quill_editor_client    = new Quill('#editor-client', {
+            modules: {
+                toolbar: [
+                    ["bold", "italic"],
+                    ["link", "blockquote", "code"],
+                    [{list: "ordered"}, {list: "bullet"}]
+                ]
+            },
+            placeholder: placeholder_editor,
+            theme: "snow"
+        });
+    }
+    
     // ---------------------------------
     // Handle Client Manage
     // ---------------------------------
@@ -8222,7 +8241,7 @@ var HomeManage = function() {
             submitHandler: function (form) {
                 var url         = $(form).attr('action');
                 var data        = new FormData();
-                var description = quill_editor.root.innerHTML;
+                var address     = quill_editor_client.root.innerHTML;
 
                 // Get Token
                 data.append(App.kdName(), App.kdToken());
@@ -8232,10 +8251,10 @@ var HomeManage = function() {
                     data.append($(this).attr("name"), $(this).val());
                 });
             
-                if (description) {
-                    data.append('description', description);
+                if (address) {
+                    data.append('address', address);
                 }
-            
+                
                 if (client_img) {
                     $.each(client_img, function(key, value){
                         data.append('client_img', value);
@@ -8299,9 +8318,6 @@ var HomeManage = function() {
 
     return {
         init: function() {
-            handleSaveHome();
-            handleHomeSetting();
-            handleValidationHomeDetailManage();
             handleGeneralClientManage();
             handleValidationClientManage();
         },

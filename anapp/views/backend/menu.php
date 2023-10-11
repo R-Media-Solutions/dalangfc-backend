@@ -56,6 +56,31 @@ if (as_administrator($member))
             ),
         ),
         array(
+            'title' => lang('menu_master_data'),
+            'nav'   => 'masterdata',
+            'link'  => 'javascript:;',
+            'icon'  => 'ni ni-tv-2',
+            'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+            'sub'   => array(
+                array(
+                    'title' => lang('menu_team'),
+                    'nav'   => 'new',
+                    'link'  => base_url('masterdata/teamlist'),
+                    'icon'  => 'fa-user-plus',
+                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+                    'sub'   => false,
+                ),
+                array(
+                    'title' => lang('menu_client'),
+                    'nav'   => 'new',
+                    'link'  => base_url('masterdata/clientlist'),
+                    'icon'  => 'fa-user-plus',
+                    'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
+                    'sub'   => false,
+                ),
+            ),
+        ),
+        array(
             'title' => lang('menu_home'),
             'nav'   => 'home',
             'link'  => 'javascript:;',
@@ -71,9 +96,9 @@ if (as_administrator($member))
                     'sub'   => false,
                 ),
                 array(
-                    'title' => lang('menu_home_client'),
+                    'title' => lang('menu_home_slider'),
                     'nav'   => 'new',
-                    'link'  => base_url('home/clientlist'),
+                    'link'  => base_url('home/sliderlist'),
                     'icon'  => 'fa-user-plus',
                     'roles' => array(STAFF_ACCESS1, STAFF_ACCESS2),
                     'sub'   => false,

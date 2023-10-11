@@ -100,8 +100,10 @@ $config['member_type']          = array(
 // ================================================
 $config['member_type_status']   = array(
     TYPE_STATUS_MEMBER          => 'Member',
+    /*
     TYPE_STATUS_RESELLER        => 'Reseller',
     TYPE_STATUS_DROPSHIPPER     => 'Dropshipper'
+    */
 );
 
 $config['member_rank']          = array(

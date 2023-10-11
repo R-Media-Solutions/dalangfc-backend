@@ -5,6 +5,9 @@
         </div>
         <div class="col-md-5">
             <div class="card-body pt-4 pb-3">
+                <div class="py-4 text-center mb-3">
+                    <img src="<?php echo BE_IMG_PATH; ?>logo.png" alt="logo" class="logo" height="100px">
+                </div>
                 <div class="card-title">
                     <p class="mb-0 mt-3">
                         <i class="fa fa-lock"></i> 

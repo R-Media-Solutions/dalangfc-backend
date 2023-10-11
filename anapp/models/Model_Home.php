@@ -8,7 +8,7 @@ class Model_Home extends AN_Model{
      */
     var $table              = TBL_PREFIX . 'page_home';
     var $home               = TBL_PREFIX . 'page_home';
-    var $client             = TBL_PREFIX . 'page_client';
+    var $client             = TBL_PREFIX . 'client';
     var $detail             = TBL_PREFIX . 'page_home';
     var $year               = TBL_PREFIX . 'year';
 

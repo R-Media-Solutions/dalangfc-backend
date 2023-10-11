@@ -179,4 +179,5 @@ $autoload['model'] = array(
     'Model_Aboutus',
     'Model_Services',
     'Model_Home',
+    'Model_Masterdata',
 );

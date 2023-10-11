@@ -305,7 +305,7 @@ define('CSS_VER_FRONT',     '0.0.9');
 define('CSS_VER_BACK',      '0.0.0.0.' . time());
 
 define('JS_VER_AUTH',       '0.0.0.3.' . time());
-define('JS_VER_MAIN',       '0.0.0.5.' . time());
+define('JS_VER_MAIN',       '0.0.0.6.' . time());
 define('JS_VER_FRONT',      '0.0.5');
 define('JS_VER_BACK',       '0.0.0.8.' . time());
 define('JS_VER_PAGE',       '0.0.0.8.' . time());

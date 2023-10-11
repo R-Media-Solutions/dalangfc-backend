@@ -6216,10 +6216,10 @@ class Member extends AN_Controller
 
         $config['upload_path']      = PROFILE_IMG_PATH;
         $config['allowed_types']    = 'jpg|png|jpeg';
-        $config['max_size']         = '1048';
+        $config['max_size']         = '5120';
         $config['overwrite']        = true;
         $config['file_name']        = $img_name;
-
+        
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if (!$this->upload->do_upload("profile_img")) {
@@ -6237,7 +6237,7 @@ class Member extends AN_Controller
         $img_msg            = 'upload success';
         $resize_image       = an_resize_image($file_name, PROFILE_IMG_PATH); // Resize Image 
         $data_member        = array('photo' => $file_name, 'datemodified' => date('Y-m-d H:i:s'));
-
+        
         if (!$update_member = $this->Model_Member->update_data_member($memberdata->id, $data_member)) {
             // Rollback Transaction
             $this->db->trans_rollback();

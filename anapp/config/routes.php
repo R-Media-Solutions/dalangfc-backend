@@ -209,8 +209,13 @@ $route['services/servicesedit/(:any)']               = "services/servicesedit/$1
 // Home Manage Page Routes
 // ---------------------------------------------------------
 $route['home/new']                                  = "home/index";
-$route['home/clientlist']                           = "home/clientlist";
-$route['home/clientnew']                            = "home/clientnew";
-$route['home/clientedit/(:any)']                    = "home/clientedit/$1";
-$route['home/clientstatus/(:any)']                  = "home/clientstatus/$1";
-$route['home/clientdelete/(:any)']                  = "home/clientdelete/$1";
+
+// Home Manage Page Routes
+// ---------------------------------------------------------
+$route['masterdata/new']                            = "masterdata/index";
+$route['masterdata/clientlist']                     = "masterdata/clientlist";
+$route['masterdata/clientnew']                      = "masterdata/clientnew";
+$route['masterdata/clientedit/(:any)']              = "masterdata/clientedit/$1";
+$route['masterdata/clientstatus/(:any)']            = "masterdata/clientstatus/$1";
+$route['masterdata/clientdelete/(:any)']            = "masterdata/clientdelete/$1";
+$route['masterdata/teamlist']                       = "masterdata/teamlist";
